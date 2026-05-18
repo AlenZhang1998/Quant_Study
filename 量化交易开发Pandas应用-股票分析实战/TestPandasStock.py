@@ -87,14 +87,14 @@ class TestPandasStock(TestCase):
     #     print('涨跌幅',df)
 
     # 计算股价移动平均
-    def testMA(self):
-        df = pd.read_csv(file_name, header=None)
-        df.columns = ["stock_id","date","close","open","high","low","volume"]
+    # def testMA(self):
+    #     df = pd.read_csv(file_name, header=None)
+    #     df.columns = ["stock_id","date","close","open","high","low","volume"]
 
-        df['ma_5'] = df.close.rolling(window=5).mean() # MD5
-        df['ma_10'] = df.close.rolling(window=10).mean() # MD10
-        df = df.fillna(0)
+    #     df['ma_5'] = df.close.rolling(window=5).mean() # MD5
+    #     df['ma_10'] = df.close.rolling(window=10).mean() # MD10
+    #     df = df.fillna(0)
 
-        print('平均收盘价',df)
+    #     print('平均收盘价',df)
 
 
